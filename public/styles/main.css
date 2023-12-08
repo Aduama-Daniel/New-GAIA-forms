@@ -1,0 +1,662 @@
+body {
+    font-family: "Euclid Circular A", "Poppins","Raleway","Helvetica", sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    scroll-behavior: smoother;
+    background: #1E4981;
+    background: linear-gradient(to right, #1E4981, #2E9AFE);
+    background: -webkit-linear-gradient(to right, #1E4981, #2E9AFE);
+    overflow-y: auto; 
+}
+
+#groupBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#langBody{
+}
+
+#extraBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: white;
+    min-width: 75vw;
+    min-height: 130vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /*border: 10px solid green;*/
+    margin: 10vh 20vw;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.498);
+    position: relative;
+    box-sizing: border-box;
+}
+
+#groupCard{
+    height: 80vh; 
+    min-height: 650px;
+    width: 70vw;
+    margin: 10vh 20vw;
+}
+
+#indCard{
+    height: 130vh;
+    min-height: 900px;                  
+}
+
+#langCard{
+    height: 95vh;
+    min-height: 700px;                  
+    margin: 2.5vh 30vw;*/
+}
+
+#extraCard{
+    height: 220vh;
+    min-height: 2100px;
+}
+
+.photo-wrapper{
+    order: 2;
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    /*border: 3px solid red;*/
+}
+
+.photo-wrapper img{
+    object-fit: cover;
+    width: auto; /* Make the image fill the width of the parent div */
+    height: 120vh; /* Make the image fill the height of the parent div */
+    position: relative;
+    /*border: 3px solid green;*/
+}
+
+.photo-wrapp,
+.ind-photo-wrapp,
+.lang-photo-wrapp,
+.extra-photo-wrapp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    /*border: 3px solid red;*/
+}
+
+.photo-wrapp{
+    order: 2;
+    height: 100%;
+}
+
+.ind-photo-wrapp{
+    height: 100%;
+    order: 2;
+}
+
+.lang-photo-wrapp{
+    order: 1;
+    height: 100%;
+}
+
+.extra-photo-wrapp{
+    order: 2;
+    height: 100%;
+}
+
+#extraCard #group-photo,
+#extraCard #lang-photo,
+#extraCard #extra-photo{
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+
+#group-photo{
+}
+
+#lang-photo{
+}
+
+#extraBody img{
+    display: block;
+}
+
+#extra-photo{
+    position: relative;
+    height: 150vh;
+    z-index: 0;
+}
+
+#extra-photo::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom,rgba(0, 0, 0, 0.931), #7c4b1028, #F4A950), url('../images/1.jpg') center center no-repeat; /* Adjust the gradient as needed */
+    pointer-events: none;
+    z-index: 2;
+}
+
+#groupBody form{
+    transform: translateY(-18%);
+}
+
+#indBody form{
+    transform: translateY(-7%);
+}
+
+#langBody form{
+    transform: translateY(-17%);
+}
+
+#extraBody form{
+    transform: translateY(-5%);
+}
+
+/*.photo{
+    /*background: linear-gradient(to bottom,rgba(0, 0, 0, 0.931), #7c4b1028, #F4A950), url('../images/1.jpg') center center no-repeat;*/
+    /*background: linear-gradient(to bottom,rgb(0, 0, 0), #104b7c17, #193b516c) ,url('../images/1.jpg') center center no-repeat;
+    background-size: cover;
+    order: 2;
+    height: 100vh;
+    width: 100%;
+    /*border: 2px solid red;
+}*/
+
+.page{
+    position: absolute;
+    height: 100vh;
+    max-width: 100%;
+    z-index: 1000;
+    color: white;
+    font-size: 400%;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50%;
+    /*border: 2px solid red;*/
+}
+
+#extraBody .page{
+    margin-bottom: 90%;
+}
+
+#langBody .page{
+}
+
+
+.form-container{
+    position: inherit;
+    width: 70vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    order: 1;
+    padding: 10%;
+    margin-bottom: 2%;
+    background-color: transparent;
+}
+
+
+#groupBody .form-container{
+    width: 70vw;
+}
+
+.form-container img{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    width: 50%;
+    height: auto;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+}
+
+#group-logo{
+    transform: translateY(-10%);
+    margin-bottom: 5vh;
+}
+
+#ind-logo{
+    margin-bottom: 15vh;
+}
+
+#lang-logo{
+    transform: translateY(-30%);
+    margin-bottom: 5vh;
+}
+
+#extra-logo{
+    margin-bottom: 15vh;
+}
+
+#groupForm{
+    height: 90vh;
+    margin-bottom: 20%;
+}
+
+#indForm{
+    margin-top: -10%;
+}
+
+#groupBody .card{
+    flex-direction: row-reverse;
+}
+
+
+#groupBody > .form-container > label{
+    margin-top: 10%;
+}
+
+h2 {
+    font-size: 200%;
+    font-weight: 600;
+    color: #1E4981;
+}
+
+#groupBody h2{
+    position: relative;
+    transform: translateY(-110%);
+}
+
+#indBody h2{
+    position: relative;
+    transform: translateY(-200%);
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+}
+
+#langBody h2{
+    position: relative;
+    transform: translateY(-160%);
+}
+
+#extraBody h2{
+    position: relative;
+    transform: translateY(-140%);
+}
+
+h3 {
+    font-size: 150%;
+    font-weight: 600;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+h4 {
+    font-size: 120%;
+    font-weight: 600;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: 520;
+}
+
+#declare{
+    margin-top: 8%;
+}
+
+#date{
+    margin-top: 8%;
+}
+
+input,
+select,
+.options,
+textarea {
+    /* Custom styles for all text input boxes */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+}
+
+.extended {
+    height: 100px;
+    box-sizing: border-box;
+}
+
+select::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+        /* Style for the options in the dropdown */
+select option {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+#groupBody input,
+#groupBody .options {
+    margin-bottom: 8%;
+}
+
+::placeholder,
+select,
+optgroup{
+    font-family: "Euclid Circular A", "Poppins","Raleway","Helvetica", sans-serif;
+}
+
+.ageGender{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+
+.ageWrapper{
+    width: 50%;
+    margin-right: 10%;
+}
+
+.genderWrapper {
+    width: 100%;
+}
+
+#genInc {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    place-content: start;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 80%;
+  font-weight: 410;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container input ~ .checkmark {
+    background-color: #ccc;
+    border-radius: 20%;
+}   
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #2196F3;
+  border-radius: 20%;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 2.6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    place-content: space-between;
+}
+
+#langBody .nav {
+    margin-top: 2%;
+}
+
+button {
+    margin-top: 3%;
+    background-color: #1E4981;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1E4981;
+    transform: scale(1.05);
+}
+
+#groupBody button{
+    padding: 0px 15px;
+    height: 10%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transform: translateY(50%)
+}
+
+#langBody button{
+    height: 5vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+}
+
+#extraBody button{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transform: translateY(50%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: white 3s ease;
+}
+
+.page-link {
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: white 6s ease; 
+}
+
+
+@media only screen and (max-width: 834px) {
+
+/*BODY*/
+body{
+    scroll-behavior: smooth;
+}
+/*CARD*/
+#groupCard{
+    /*width: 90vw;*/
+    margin: 10vh 15vw;
+    scroll-behavior: smooth;
+}
+
+#indCard{
+    margin: 2.5vh 15vw;
+    overflow: ;
+}
+
+#langCard{
+    height: 95vh;
+    width: 90vw;
+    margin: 2.5vh 15vw;*/
+}
+
+#extraCard{
+    width: 80vw;
+}
+
+/*PAGE INDICATOR*/
+.page{
+    transform: rotate(90deg);
+}
+
+#extraCard .page{
+    height: 100px;
+    width: 900px;
+    max-width: 700%;
+}
+
+/*LOGO*/
+#lang-logo{
+    transform: translateY(-10%);
+}
+
+#extra-logo{
+    transform: translateY(0vh);
+}
+
+#ind-logo{
+    transform: translateY(-5vh);
+}
+
+
+/*H2*/
+h2 {
+    font-size: 160%;
+}
+
+#langBody h2{
+    position: relative;
+    transform: translateY(-4vh);
+    margin-bottom: 7vh;
+}
+
+#extraBody h2{
+    position: relative;
+    transform: translateY(-100%);
+}
+
+#groupBody h2{
+    position: relative;
+    transform: translateY(-6vh);
+}
+
+#indBody h2{
+    position: relative;
+    transform: translateY(-15vh);
+}
+
+/*FORM SECTION*/
+#indForm{
+    margin-top: -30%;
+}
+
+/*H3*/
+
+h3 {
+    font-size: 135%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+body{
+    overflow-x: hidden;
+}
+
+.photo-wrapp,
+.ind-photo-wrapp,
+.lang-photo-wrapp,
+.extra-photo-wrapp{
+width: 0;
+}
+
+#groupBody{
+    background: linear-gradient(to bottom,rgb(0, 0, 0), #104b7c17, #193b51bc) ,url('../images/1.jpg') center center no-repeat; 
+}
+
+#indBody{
+    background: linear-gradient(to bottom,rgb(0, 0, 0), #104b7c17, #193b516c) ,url('../images/2.jpg') center center no-repeat;
+}
+
+#langBody{
+    background: linear-gradient(to bottom,rgb(0, 0, 0), #104b7c17, #193b516c) ,url('../images/7.jpg') center center no-repeat;
+}
+
+#extraBody{
+    background: linear-gradient(to bottom,rgb(0, 0, 0), #104b7c17, #193b516c) ,url('../images/3.jpg') center center no-repeat;
+}
+}
