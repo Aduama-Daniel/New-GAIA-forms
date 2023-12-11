@@ -88,7 +88,7 @@ public function submitForm(Request $request)
         'group_id' => $selectedGroup->id,
     ]);
 
-    $request->session()->flash('success', 'User registered successfully!');
+    $request->session()->flash('success', '.User registered successfully!');
     $request->session()->put('membership', $membership);
 
     return redirect()->route('groups.store');

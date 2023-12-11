@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Group; 
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
+
 
 class GroupController extends Controller
 {
@@ -39,8 +41,9 @@ class GroupController extends Controller
     
         $groups = Group::whereRaw('total_members > (SELECT COUNT(*) FROM memberships WHERE memberships.group_id = groups.id)')
         ->get();
+        $request->session()->flash('success', '.Group registered successfully!');
     
-        return view('membership.individual', ['groups' => $groups])->with('success', 'Group registered successfully!');
+        return view('membership.individual', ['groups' => $groups]);
     }
     
 

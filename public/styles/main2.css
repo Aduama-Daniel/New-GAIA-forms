@@ -16,10 +16,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden; 
 }
 
 #langBody{
-    
 }
 
 #extraBody{
@@ -52,19 +52,19 @@ body {
 }
 
 #indCard{
-    height: 150vh;
+    height: 160vh;
     min-height: 900px;                  
 }
 
 #langCard{
-    height: 100vh;
+    height: 95vh;
     min-height: 700px;                  
-    margin: 2.5vh 30vw;
+    margin: 2.5vh 30vw;*/
 }
 
 #extraCard{
-    height: 200vh;
-    min-height: 2000px;
+    height: 220vh;
+    min-height: 2100px;
 }
 
 .photo-wrapper{
@@ -130,12 +130,6 @@ body {
     overflow: hidden;
     position: relative;
     width: auto;
-}
-
-#group-photo{
-}
-
-#lang-photo{
 }
 
 #extraBody img{
@@ -204,10 +198,6 @@ body {
 #extraBody .page{
     margin-bottom: 90%;
 }
-
-#langBody .page{
-}
-
 
 .form-container{
     position: inherit;
@@ -480,15 +470,8 @@ optgroup{
     place-content: space-between;
 }
 
-.nav2{
-      display:flex;
-      size: 10cm;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    place-content: space-between;
-}
-#langBody .nav {
+#langBody .nav,
+#groupBody .nav {
     margin-top: 2%;
 }
 
@@ -508,13 +491,19 @@ button:hover {
     transform: scale(1.05);
 }
 
-#groupBody button{
+#groupBody button {
     padding: 0px 15px;
-    height: 10%;
+    height: 5vh;
     display: flex;
     justify-content: left;
     align-items: center;
-    transform: translateY(50%)
+    transform: translateY(50%);
+    color: white;
+}
+
+#groupBody button > a {
+    color: white;
+    text-decoration: none;
 }
 
 #langBody button{
@@ -554,6 +543,11 @@ body {
 body{
     scroll-behavior: smooth;
 }
+
+#groupBody{
+    overflow-y: visible; 
+}
+
 /*CARD*/
 #groupCard{
     /*width: 90vw;*/

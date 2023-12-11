@@ -37,7 +37,10 @@
       
 
       </div>
+
+      
       <div class="form-container">
+      <br><br><br><br>
       <img src="{{ asset('/images/logo2.png') }}" id="group-logo">
 
 
@@ -74,9 +77,18 @@
             <span class="checkmark"></span>
             </label>
          </div>
+
+   <div class="nav2">
                      
          <button type="submit" value ="Submit" id="contButtonLink"> Register</button>
-         <button type="button" id="contButtonLink"><a href="{{route('membership.form')}}">Skip</a></button> 
+         <button type="button" ><a href="{{route('membership.form')}}" class="page-link">Skip</a></button> 
+        
+   </div>
+
+       
+            <br>
+            <br>
+            
 
          @if (session('success'))
     <div class="alert alert-success">
@@ -94,7 +106,10 @@
         </ul>
     </div>
 @endif
+
+
       </form>
+      
    </div>
    </div>
 

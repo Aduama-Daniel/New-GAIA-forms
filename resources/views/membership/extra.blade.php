@@ -85,7 +85,7 @@
 
 <div class="nav">
 
-<button type="button" ><a href="{{route('language')}}">Back</a></button>   
+<button type="button" ><a href="{{route('language')}}" class="page-link">Back</a></button>   
            
 
          <button type="submit" id="contButtonLink">Submit</button>

@@ -59,7 +59,7 @@
          </div>
 
          <div class="nav">
-            <button type="button" id="backButtonLink"><a href="{{route('membership.form')}}">Back</a></button>   
+            <button type="button"><a href="{{route('membership.form')}}" class="page-link">Back</a></button>   
            
             <button type="submit">Next</button>
          </div>
