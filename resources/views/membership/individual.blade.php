@@ -38,7 +38,11 @@
       <div class="form-container">
          <img src="{{secure_asset('/images/logo2.png')}}" id="ind-logo">
          <h2>Club Registration Form</h2>
+<<<<<<< HEAD
          <form id="step1Form" action="{{url( route('membership.store', ['step' => 1]) )}}" method="post">
+=======
+         <form id="step1Form" action="{{route('membership.store', ['step' => 1]) }}" method="post">
+>>>>>>> d35ca0c46894e828f233a7422395ae6722aad5ae
             @csrf
    <h3>Personal Info</h3>
             <div class="form-group">
