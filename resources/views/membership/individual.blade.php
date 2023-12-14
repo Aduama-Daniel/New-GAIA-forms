@@ -32,11 +32,11 @@
 <body id="indBody">
    <div class="card" id="indCard">
       <div class="ind-photo-wrapp" id="photoWrap">
-         <img src="{{asset('/images/2.jpg')}}" class="photo"></img>
+         <img src="{{secure_asset('/images/2.jpg')}}" class="photo"></img>
          <div class="page">Personal Information</div>
       </div>
       <div class="form-container">
-         <img src="{{asset('/images/logo2.png')}}" id="ind-logo">
+         <img src="{{secure_asset('/images/logo2.png')}}" id="ind-logo">
          <h2>Club Registration Form</h2>
          <form id="step1Form" action="{{ route('membership.store', ['step' => 1]) }}" method="post">
             @csrf

@@ -4,19 +4,19 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>GAIA Club registration</title>
-   <link rel="stylesheet" href="{{ asset('/styles/nav.css') }}">
-<link rel="stylesheet" href="{{ asset('/styles/main.css') }}">
-<link rel="stylesheet" href="{{ asset('/styles/footer.css') }}"></head> 
+
+<link rel="stylesheet" href="{{ secure_asset('/styles/main.css') }}">
+</head> 
 <body id="extraBody">
    <div class="card" id="extraCard">
       <div class="extra-photo-wrapp" id="photoWrap">
-         <img src="{{asset('/images/3.jpg')}}" class="photo" id="extra-photo"></img>
+         <img src="{{secure_asset('/images/3.jpg')}}" class="photo" id="extra-photo"></img>
 
          <!--<div class="photo"></div>-->
          <div class="page">Background, Interests, Skills & Contributions</div>
       </div>
       <div class="form-container">
-      <img src="{{asset('/images/logo2.png')}}" id="extra-logo">
+      <img src="{{secure_asset('/images/logo2.png')}}" id="extra-logo">
       <h2>Club Registration Form</h2>
       <form id="step1Form" action="{{ route('membership.submit') }}" method="post">
 @csrf <!-- Laravel CSRF token -->

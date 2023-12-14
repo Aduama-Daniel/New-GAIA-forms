@@ -25,7 +25,7 @@
    
    <div class="card" id="groupCard">
       <div class="photo-wrapp" id="photoWrap">
-         <img src="{{asset('/images/1.jpg')}}" class="photo" id="group-photo"></img>
+         <img src="{{secure_asset('/images/1.jpg')}}" class="photo" id="group-photo"></img>
 
          
          
@@ -41,7 +41,7 @@
       
       <div class="form-container">
       <br><br><br><br>
-      <img src="{{ asset('/images/logo2.png') }}" id="group-logo">
+      <img src="{{ secure_asset('/images/logo2.png') }}" id="group-logo">
 
 
       
