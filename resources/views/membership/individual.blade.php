@@ -91,7 +91,7 @@
             <input type="tel" id="phoneNumber" name="phone_number" placeholder="Phone number" required>
 
             <div class="nav">
-               <button type="button"><a href="{{ route('groups.store') }}" class="page-link">Back</a></button>
+               <button type="button"><a href="{{ url(route('groups.store')) }}" class="page-link">Back</a></button>
                <button type="submit">Next</button>
             </div>
          </form>
