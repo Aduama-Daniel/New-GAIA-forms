@@ -46,7 +46,7 @@
 
       
       <h2>Club Registration Form</h2>
-      <form id="groupForm" action="{{ route('groups.create') }}" method="post">
+      <form id="groupForm" action="{{ url(route('groups.create')) }}" method="post">
       @csrf <!-- Laravel CSRF token -->
 
       <h3>Group Section</h3>
@@ -82,6 +82,7 @@
                      
          <button type="submit" value ="Submit" id="contButtonLink"> Register</button>
          <button type="button" ><a href="{{route('membership.form')}}" class="page-link">Skip</a></button> 
+         
         
    </div>
 
