@@ -18,7 +18,7 @@
       <div class="form-container">
       <img src="{{secure_asset('/images/logo2.png')}}" id="extra-logo">
       <h2>Club Registration Form</h2>
-      <form id="step1Form" action="{{url( route('membership.submit')) }}" method="post">
+      <form id="step1Form" action="{{ route('membership.submit') }}" method="post">
 @csrf <!-- Laravel CSRF token -->
          <h3>Background, Interests, Skills & Contributions</h3>
          <h4>Background & Interests</h4>
@@ -85,7 +85,7 @@
 
 <div class="nav">
 
-<button type="button" ><a href="{{url(route('language'))}}" class="page-link">Back</a></button>   
+<button type="button" ><a href="{{route('language')}}" class="page-link">Back</a></button>   
            
 
          <button type="submit" id="contButtonLink">Submit</button>
