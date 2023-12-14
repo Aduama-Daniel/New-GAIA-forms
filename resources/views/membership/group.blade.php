@@ -46,7 +46,7 @@
 
       
       <h2>Club Registration Form</h2>
-      <form id="groupForm" action="{{secure_route('groups.create') }}" method="post">
+      <form id="groupForm" action="{{secure_url(route('groups.create')) }}" method="post">
       @csrf <!-- Laravel CSRF token -->
 
       <h3>Group Section</h3>
