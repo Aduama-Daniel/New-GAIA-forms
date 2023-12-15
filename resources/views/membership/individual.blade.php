@@ -38,7 +38,7 @@
       <div class="form-container">
          <img src="{{secure_asset('/images/logo2.png')}}" id="ind-logo">
          <h2>Club Registration Form</h2>
-         <form id="step1Form" action="{{ route('membership.store', ['step' => 1]) }}" method="post">
+         <form id="step1Form" action="{{ secure_url('/store/1') }}" method="post">
             @csrf
    <h3>Personal Info</h3>
             <div class="form-group">
@@ -91,7 +91,7 @@
             <input type="tel" id="phoneNumber" name="phone_number" placeholder="Phone number" required>
 
             <div class="nav">
-               <button type="button"><a href="{{ route('groups.store') }}" class="page-link">Back</a></button>
+               <button type="button"><a href="{{ secure_url('/groups/form') }}" class="page-link">Back</a></button>
                <button type="submit">Next</button>
             </div>
          </form>
