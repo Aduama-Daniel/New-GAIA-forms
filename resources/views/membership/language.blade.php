@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>GAIA Club registration</title>
-   
-<link rel="stylesheet" href="{{ secure_asset('/styles/main.css') }}">
-</head> 
+@extends('layouts.layout')
+
+@section('title', 'Language Proficiency')
+
+@section('content')
+
+
+
+
 <body id="langBody">
    <div class="card" id="langCard">
       <div class="lang-photo-wrapp" id="photoWrap">
@@ -18,6 +18,7 @@
       <img src="{{secure_asset('/images/logo2.png')}}" id="lang-logo" alt="GAIA logo">
       <h2>Club Registration Form</h2>
       <form id="step1Form" action="{{ secure_url('/store/2') }}" method="post">
+      <!-- <form id="step1Form" action="{{url('/store/2') }}" method="post"> -->
 @csrf <!-- Laravel CSRF token -->   
       <h3>Language Proficiency</h3>
          <h4>English Proficiency</h4>
@@ -60,6 +61,7 @@
 
          <div class="nav">
             <button type="button"><a href="{{secure_url('/form')}}" class="page-link">Back</a></button>   
+            <!-- <button type="button"><a href="{{url('/form')}}" class="page-link">Back</a></button>    -->
            
             <button type="submit">Next</button>
          </div>
@@ -69,4 +71,7 @@
 
    
 </body>
-</html>
+
+
+@endsection
+

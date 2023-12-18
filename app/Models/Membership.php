@@ -39,6 +39,7 @@ class Membership extends Model
         'declaration',
         'date',
         'group_id',
+        'country',
     ];
 
     protected $casts = [

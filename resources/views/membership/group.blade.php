@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>GAIA Club registration</title>
-   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-   
-<link rel="stylesheet" href="{{ secure_asset('/styles/main.css') }}">
+@extends('layouts.layout')
 
+@section('title', 'Group Registration')
 
-
-
-</head> 
-
-
+@section('content')
 
 
 
@@ -26,6 +15,7 @@
    <div class="card" id="groupCard">
       <div class="photo-wrapp" id="photoWrap">
          <img src="{{secure_asset('/images/1.jpg')}}" class="photo" id="group-photo"></img>
+         <!-- <img src="{{asset('/images/1.jpg')}}" class="photo" id="group-photo"></img> -->
 
          
          
@@ -42,11 +32,13 @@
       <div class="form-container">
       <br><br><br><br>
       <img src="{{ secure_asset('/images/logo2.png') }}" id="group-logo">
+      <!-- <img src="{{ asset('/images/logo2.png') }}" id="group-logo"> -->
 
 
       
       <h2>Club Registration Form</h2>
       <form id="groupForm" action="{{secure_url('/groups/submit') }}" method="post">
+      <!-- <form id="groupForm" action="{{url('/groups/submit') }}" method="post"> -->
       @csrf <!-- Laravel CSRF token -->
 
       <h3>Group Section</h3>
@@ -78,12 +70,14 @@
             </label>
          </div>
 
-   <div class="nav2">
+   <div class="nav">
                      
          <button type="submit" value ="Submit" id="contButtonLink"> Register</button>
          <button type="button" ><a href="{{secure_url('/form')}}" class="page-link">Skip</a></button> 
+         <!-- <button type="button" ><a href="{{url('/form')}}" class="page-link">Skip</a></button> -->
         
    </div>
+   
 
        
             <br>
@@ -91,14 +85,14 @@
             
 
          @if (session('success'))
-    <div class="alert alert-success">
+    <div class="custom-alert success">
         {{ session('success') }}
     </div>
 @endif
 
 
 @if ($errors->any())
-    <div class="alert alert-danger">
+    <div class="custom-alert error">
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -127,4 +121,4 @@
 
    
 </body>
-</html>
+@endsection

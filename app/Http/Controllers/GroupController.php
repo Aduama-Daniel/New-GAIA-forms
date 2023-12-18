@@ -41,7 +41,7 @@ class GroupController extends Controller
     
         $groups = Group::whereRaw('total_members > (SELECT COUNT(*) FROM memberships WHERE memberships.group_id = groups.id)')
         ->get();
-        $request->session()->flash('success', '.Group registered successfully!');
+        $request->session()->flash('good', '.Group registered successfully!');
     
         return view('membership.individual', ['groups' => $groups]);
     }

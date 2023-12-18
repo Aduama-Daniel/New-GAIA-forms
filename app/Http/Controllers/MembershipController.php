@@ -34,6 +34,8 @@ public function submitForm(Request $request)
     $selectedGroup = Group::find($formData['group_id']);
     $formData['group_id'] = $selectedGroup->id;
 
+    //dd($formData);
+
      // Merge form data and request data
      $data = array_merge($request->all(), $formData);
 
@@ -47,6 +49,7 @@ public function submitForm(Request $request)
          'gender' => 'required|max:255',
          'email' => 'required|email|max:255',
          'phone_number' => 'required|max:255',
+         'country' => 'required|max:255',
          'english_spoken' => 'required|max:255',
          'english_written' => 'required|max:255',
          'french_spoken' => 'required|max:255',
@@ -72,6 +75,7 @@ public function submitForm(Request $request)
         'gender' => $formData['gender'],
         'email' => $formData['email'],
         'phone_number' => $formData['phone_number'],
+       
         'english_spoken' => $formData['english_spoken'],
         'english_written' => $formData['english_written'],
         'french_spoken' => $formData['french_spoken'],
@@ -84,6 +88,7 @@ public function submitForm(Request $request)
         'non_technical_skills' => $request['non_technical_skills'],
         'preferred_group_role' => $request['preferred_group_role'],
         'additional_information' => $request['additional_information'],
+        'country' => $formData['country'],
         
         'group_id' => $selectedGroup->id,
     ]);

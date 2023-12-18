@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>GAIA Club registration</title>
+@extends('layouts.layout')
 
-<link rel="stylesheet" href="{{ secure_asset('/styles/main.css') }}">
-</head> 
+@section('title', 'Extra information')
+
+@section('content')
+
+
+
+
+
 <body id="extraBody">
    <div class="card" id="extraCard">
       <div class="extra-photo-wrapp" id="photoWrap">
@@ -18,7 +19,8 @@
       <div class="form-container">
       <img src="{{secure_asset('/images/logo2.png')}}" id="extra-logo">
       <h2>Club Registration Form</h2>
-      <form id="step1Form" action="{{ secure_url('/submit') }}" method="post">
+      <!-- <form id="step1Form" action="{{ secure_url('/submit') }}" method="post"> -->
+      <form id="step1Form" action="{{url('/submit') }}" method="post">
 @csrf <!-- Laravel CSRF token -->
          <h3>Background, Interests, Skills & Contributions</h3>
          <h4>Background & Interests</h4>
@@ -94,4 +96,4 @@
       </form>
    </div>
 </body>
-</html>
+@endsection

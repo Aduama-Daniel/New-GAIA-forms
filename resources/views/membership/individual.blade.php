@@ -1,50 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>GAIA Club registration</title>
-   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-   
-   <link rel="stylesheet" href="{{secure_asset('/styles/main.css') }}">
-   
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-</head> 
+@extends('layouts.layout')
 
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+@section('title', 'Individual Registration')
 
 
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+
+
+
+
+@section('content')
+
+
+
+
+
+
+
+
 <body id="indBody">
    <div class="card" id="indCard">
       <div class="ind-photo-wrapp" id="photoWrap">
          <img src="{{secure_asset('/images/2.jpg')}}" class="photo"></img>
+         <!-- <img src="{{asset('/images/2.jpg')}}" class="photo"></img> -->
          <div class="page">Personal Information</div>
       </div>
       <div class="form-container">
          <img src="{{secure_asset('/images/logo2.png')}}" id="ind-logo">
          <h2>Club Registration Form</h2>
          <form id="step1Form" action="{{ secure_url('/store/1') }}" method="post">
+         <!-- <form id="step1Form" action="{{ url('/store/1') }}" method="post"> -->
             @csrf
    <h3>Personal Info</h3>
             <div class="form-group">
                <label for="existing_group">Select Existing Group:</label>
                <select id="existing_group" name="group_id" class="form-control">
-                  <option value="" selected disabled>Select a group</option>
+                  <option value="" selected disabled>Select your group</option>
                   @foreach($groups as $group)
                      <option value="{{ $group->id }}">{{ $group->group_name }}</option>
                   @endforeach
@@ -86,17 +75,57 @@
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Email" required>
+            
 
             <label for="phoneNumber">Phone Number:</label>
             <input type="tel" id="phoneNumber" name="phone_number" placeholder="Phone number" required>
 
+            <div class="genderWrapper">
+                  <label for="country">Country</label>
+                  <select class="options" id="country" name="country" required>
+                     <optgroup>
+                        <option value="" disabled selected>Select your Country</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Côte d’Ivoire">Côte d’Ivoire</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Senegal">Senegal</option>
+                       
+                     </optgroup>
+                  </select>
+               </div>
+            
+
             <div class="nav">
                <button type="button"><a href="{{ secure_url('/groups/form') }}" class="page-link">Back</a></button>
+               <!-- <button type="button"><a href="{{ url('/groups/form') }}" class="page-link">Back</a></button> -->
                <button type="submit">Next</button>
             </div>
          </form>
       </div>
    </div>
+
+   
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 
    <script>
       // JavaScript to manage form navigation
@@ -121,4 +150,5 @@ function nextStep(step) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
-</html>
+
+@endsection

@@ -481,8 +481,8 @@ optgroup{
 }
 
 .nav2{
-      display:flex;
-      size: 10cm;
+      display:block;
+      
     justify-content: left;
     align-items: center;
     flex-direction: row;
@@ -668,4 +668,23 @@ width: 0;
 #extraBody{
     background: linear-gradient(to bottom,rgb(0, 0, 0), #104b7c17, #193b516c) ,url('../images/3.jpg') center center no-repeat;
 }
+
+.custom-alert {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
 }
