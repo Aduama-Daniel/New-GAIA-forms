@@ -1,0 +1,103 @@
+body {
+    font-family: "Euclid Circular A", "Poppins", "Raleway", "Helvetica", sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    scroll-behavior: smoother;
+    background: #1E4981;
+    background: linear-gradient(to right, #1E4981, #2E9AFE);
+    background: -webkit-linear-gradient(to right, #1E4981, #2E9AFE);
+    overflow-y: auto;
+    z-index: 10;
+}*
+
+/* Styling for the policy pop-up */
+#policy-popup {
+   margin-top: 5%;
+   width: 80vw;
+   background-color: #ffffff;
+   padding: 25px 70px;
+   margin-bottom: 5%;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+
+#policy-logo {
+   width: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 5% 0%;
+   order: 0;
+}
+
+#policy-overlay {
+   display: none;
+   top: 0;
+   left: 0;
+   width: 80vw;
+   height: 100%;
+   /*background: rgba(0, 0, 0, 0.5);*/
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+}
+
+/* Close button styling */
+#close-button {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+}
+
+#closeButt{
+   width: 70px;
+   justify-content: center;
+   margin-bottom: 100px;
+}
+
+/*Style for Policy clickable*/
+#policy-button {
+   color: #1E4981;
+   font-weight: 550;
+   font-size: 0.9rem;
+   font-style: italic;
+   cursor: pointer;
+   text-decoration: none; /* Add this line for underline effect */
+}
+
+#policy-button:hover {
+   color: #14406D; /* Change color on hover if desired */
+   text-decoration: underline; /* Remove underline on hover if desired */
+}
+
+
+#policy-popup  h2 {
+   margin-bottom: 0;
+   transform: translateY(0%);
+}
+
+@media only screen and (max-width: 834px) {
+#policy-popup  h2 {
+   transform: translateY(0);
+}
+}
+
+@media only screen and (max-width: 600px) {
+#policy-logo {
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 9% 0%;
+   order: 0;
+}
+
+#policy-popup {
+   padding: 25px 45px;
+}

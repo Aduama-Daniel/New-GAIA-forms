@@ -1,5 +1,5 @@
 body {
-    font-family: "Euclid Circular A", "Poppins","Raleway","Helvetica", sans-serif;
+    font-family: "Euclid Circular A", "Poppins", "Raleway", "Helvetica", sans-serif;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -11,6 +11,24 @@ body {
     background: -webkit-linear-gradient(to right, #1E4981, #2E9AFE);
     overflow-y: auto; 
 }
+.custom-alert {
+    padding: 4px;
+    margin-bottom: 2px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
 
 #groupBody{
     display: flex;
@@ -19,7 +37,6 @@ body {
 }
 
 #langBody{
-    
 }
 
 #extraBody{
@@ -36,7 +53,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    /*border: 10px solid green;*/
     margin: 10vh 20vw;
     box-sizing: border-box;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.498);
@@ -45,26 +61,26 @@ body {
 }
 
 #groupCard{
-    height: 80vh; 
+    height: 100vh; 
     min-height: 650px;
     width: 70vw;
     margin: 10vh 20vw;
 }
 
 #indCard{
-    height: 150vh;
-    min-height: 900px;                  
+    height: 160vh;
+    min-height: 1100px;                  
 }
 
 #langCard{
-    height: 100vh;
+    height: 95vh;
     min-height: 700px;                  
-    margin: 2.5vh 30vw;
+    margin: 2.5vh 30vw;*/
 }
 
 #extraCard{
-    height: 200vh;
-    min-height: 2000px;
+    height: 230vh;
+    min-height: 2200px;
 }
 
 .photo-wrapper{
@@ -77,7 +93,6 @@ body {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    /*border: 3px solid red;*/
 }
 
 .photo-wrapper img{
@@ -99,7 +114,6 @@ body {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    /*border: 3px solid red;*/
 }
 
 .photo-wrapp{
@@ -198,7 +212,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 50%;
-    /*border: 2px solid red;*/
 }
 
 #extraBody .page{
@@ -358,7 +371,7 @@ select::after {
     transform: translateY(-50%);
 }
 
-        /* Style for the options in the dropdown */
+/* Style for the options in the dropdown */
 select option {
     background-color: #f8f8f8;
     color: #333;
@@ -480,14 +493,6 @@ optgroup{
     place-content: space-between;
 }
 
-.nav2{
-      display:contents;
-      size: 10cm;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    place-content: space-between;
-}
 #langBody .nav {
     margin-top: 2%;
 }
@@ -508,13 +513,19 @@ button:hover {
     transform: scale(1.05);
 }
 
+#groupBody button > a{
+    color: #fff;
+    text-decoration: none;
+}
+
 #groupBody button{
     padding: 0px 15px;
-    height: 10%;
+    height: 5vh;
     display: flex;
     justify-content: left;
     align-items: center;
-    transform: translateY(50%)
+    transform: translateY(50%);
+    color: #fff
 }
 
 #langBody button{
@@ -532,6 +543,10 @@ button:hover {
     transform: translateY(50%);
 }
 
+#extraBody #backButt > a{
+    color: white;
+    text-decoration: none;
+}
 body {
     margin: 0;
     padding: 0;
@@ -549,7 +564,6 @@ body {
 
 
 @media only screen and (max-width: 834px) {
-
 /*BODY*/
 body{
     scroll-behavior: smooth;
@@ -646,6 +660,14 @@ body{
     overflow-x: hidden;
 }
 
+#groupCard{
+    height: 80vh;
+}
+
+#indCard{
+    height: 140vh;
+}
+
 .photo-wrapp,
 .ind-photo-wrapp,
 .lang-photo-wrapp,
@@ -668,23 +690,4 @@ width: 0;
 #extraBody{
     background: linear-gradient(to bottom,rgb(0, 0, 0), #104b7c17, #193b516c) ,url('../images/3.jpg') center center no-repeat;
 }
-
-.custom-alert {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.success {
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
-    color: #155724;
-}
-
-.error {
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    color: #721c24;
-}
-
 }

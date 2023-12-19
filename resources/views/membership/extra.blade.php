@@ -20,7 +20,7 @@
       <img src="{{secure_asset('/images/logo2.png')}}" id="extra-logo">
       <h2>Club Registration Form</h2>
       <form id="step1Form" action="{{ secure_url('/submit') }}" method="post">
-      
+      <!-- <form id="step1Form" action="{{url('/submit') }}" method="post"> -->
 @csrf <!-- Laravel CSRF token -->
          <h3>Background, Interests, Skills & Contributions</h3>
          <h4>Background & Interests</h4>

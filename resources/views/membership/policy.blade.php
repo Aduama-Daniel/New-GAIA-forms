@@ -1,153 +1,100 @@
-@extends('layouts.layout')
 
-@section('title', 'Group Registration')
+<body id="extraBody">
+   <div class="card" id="extraCard">
+      <div class="extra-photo-wrapp" id="photoWrap">
+        <!--<img src="{{asset('/images/3.jpg')}}" class="photo" id="extra-photo"></img>-->
+        <img src="2.jpg" class="photo" id="extra-photo"></img>
 
-@section('head')
-    <!-- Include stylesheets, meta tags, etc. -->
-    <link rel="stylesheet" href="{{ asset('/styles/form.css') }}">
-
-    <!-- <style>
-      .custom-alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.success {
-    color: #3c763d;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-}
-
-.error {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-}
-
-    </style> -->
-@endsection
-
-@section('content')
-
-
-
-
-
-
-
-<body id="groupBody">
-
-
-
-   
-      <div class="card" id="groupCard">
-               <div class="photo-wrapp" id="photoWrap">
-                     <img src="{{secure_asset('/images/1.jpg')}}" class="photo" id="group-photo"></img>
-                     <!-- <img src="{{asset('/images/1.jpg')}}" class="photo" id="group-photo"></img> -->
-
-                     
-                     
-
-                     
-                     <!--<div class="photo"></div>-->
-                     <div class="page">Group Information</div>
-
-               
-
-               </div>
-
-               
-               <div class="form-container">
-                     <br><br><br><br>
-                     <img src="{{ secure_asset('/images/logo2.png') }}" id="group-logo">
-                     <!-- <img src="{{ asset('/images/logo2.png') }}" id="group-logo"> -->
-
-
-                     
-                     <h2>Club Registration Form</h2>
-                     <form id="groupForm" action="{{secure_url('/groups/submit') }}" method="post">
-                     <!-- <form id="groupForm" action="{{url('/groups/submit') }}" method="post"> -->
-                     @csrf <!-- Laravel CSRF token -->
-
-
-
-                     <h3>Group Section</h3>
-
-                     <p> <a id="policy-button" role="button" tabindex="0" onclick="openPolicyPopup()">Kindly read our Policy & Guidelines before you proceed..</a>  </p>
-
-
-                  
-                     
-
-                        
-
-                        <label for="groupName">Group Name</label>
-                        <input type="text" id="groupName" name="group_name" placeholder="Enter your group name" required>
-
-                        <label for="numOfMembers">Number of Group Members</label>
-                           <select class="options" id="numOfMembers" name="total_members" min = "3" max="6" required>
-                        <optgroup>
-                           <option value="" disabled selected>Select Number of Members</option>
-                           <option value="3">3</option>
-                           <option value="4">4</option>
-                           <option value="5">5</option>
-                           <option value="6">6</option>
-                        </optgroup>
-                     </select>
-
-                  <label for="genderInclusive">Gender Inclusive Section</label>
-                  <div id="genInc">
-                     <label class="container">Yes, our group is gender inclusive.
-                     <input type="checkbox" checked="checked" name = "gender_inclusivity" value="1">
-                     
-                     <span class="checkmark"></span>
-                     </label>
-                  </div>
-
-                     <div class="nav">
-                                       
-                           <button type="submit" value ="Submit" id="contButtonLink"> Register</button>
-                           <button type="button" ><a href="{{secure_url('/form')}}" class="page-link">Skip</a></button> 
-                           <!-- <button type="button" ><a href="{{url('/form')}}" class="page-link">Skip</a></button> -->
-                        
-                     </div>
-            
-
-            
-               <br>
-               <br>
-
-               
-
-               @if (session('success'))
-                                 <div class="custom-alert success">
-                                    {{ session('success') }}
-                                 </div>
-                              @endif
-
-
-                     @if ($errors->any())
-                        <div class="custom-alert error">
-                           <ul>
-                                 @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                 @endforeach
-                           </ul>
-                        </div>
-                      @endif
-
-            </form>
-         </div>
+         <!--<div class="photo"></div>-->
+         <div class="page">Background, Interests, Skills & Contributions</div>
       </div>
+      <div class="form-container">
+      <!--<img src="{{asset('/images/logo2.png')}}" id="extra-logo">-->
+        <img src="logo2.png" id="extra-logo">
+      <h2>Club Registration Form</h2>
+      <form id="step1Form" action="{{ url('/submit') }}" method="post">
+      
+@csrf <!-- Laravel CSRF token -->
+         <h3>Background, Interests, Skills & Contributions</h3>
+         <h4>Background & Interests</h4>
+         <div class="extras" id="bgAndInt">
+            <label for="prevExp">Previous Experience with Digital Technologies</label>
+               <select class="options" id="prevExp" name="experience_digital_technologies" placeholder="Select your level of experience with digital technologies" required>
+                  <option value="" disabled selected>Select your level of experience with digital technologies</option>
+                  <option value="none">None</option>
+                  <option value="basic">Basic</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="Advanced">Advanced</option>
+               </select>
 
-      <div id="policy-overlay" onclick="closePolicyPopup()">
+            <label for="intInEarth">Specific Interest in Earth Observation and IoT</label>
+            <textarea class="extended" type="text" id="intInEarth" name="interest_earth_observation" placeholder="Describe your interest and any relevant experience or projects" required max="200" min="1"></textarea>
+
+            <label for="reason">Why do you want to join the GAIA Club?</label>
+            <textarea class="extended" type="text" id="reason" name="why_join_gaia_club" placeholder="Provide a brief statement on your motivation to join and what you hope to achieve" required max="200" min="1"></textarea>
+
+            <label for="reason">Personal and Professional Goals</label>
+            <textarea class="extended" type="text" id="reason" name="personal_and_professional_goals" placeholder="How do you envision your involvement with the GAIA Club contributing to your personal and professional goals?" required max="200" min="1"></textarea>
+         </div>
+
+      <h4>Skills & Contributions</h4>
+         <div class="extras" id="skAndCon">
+            <label for="techSkills">Technical Skills</label>
+            <textarea class="extended" type="text" id="techSkills" name="technical_skills" placeholder="List any technical skills relevant to earth observation and IoT" required max="200" min="1"></textarea>
+
+            <label for="nonTechSkills">Non-Technical Skills</label>
+            <textarea class="extended" type="text" id="nonTechSkills" name="non_technical_skills" placeholder="Describe any other skills you bring to the team" required max="200" min="1"></textarea>
+         </div>
+
+      <h4>Group Participation</h4>
+         <div class="extras" id="participation">
+            <label for="role">Preferred Group Role</label>
+               <select class="options" id="role" name="preferred_group_role" placeholder="Preferred group role" required>
+                  <option value="" disabled selected>Preferred group role</option>
+                  <option value="research">Research and Conceptualization</option>
+                  <option value="techDev">Technical Development</option>
+                  <option value="proMgmnt">Project Management</option>
+                  <option value="comAndOut">Communication and Outreach</option>
+               </select>
+         </div>
+
+      <h3>Additional Information</h3>
+         <div class="extras" id="addInfo">
+            <label for="reason">Any other information you would like to share</label>
+            <textarea class="extended" type="text" id="reason" name="additional_information" placeholder="Provide a brief statement on your motivation to join and what you hope to achieve" required max="200" min="1"></textarea>
+         </div>
+
+         <label  id="declare"for="Declare">Declaration</label>
+            <label class="container">I hereby declare that the information provided is true and accurate to the best of my knowledge. I understand that membership in the GAIA Club requires active participation and commitment
+            <input type="checkbox" checked="checked" required>
+            <span class="checkmark"></span>
+         </label>
+
+         <label id="date" for="currentDate">Current Date</label>
+         <input type="date" id="currentDate" name="currentDate" required>
+
+         <script>
+         // JavaScript to set the current date as the default value
+         document.getElementById('currentDate').valueAsDate = new Date();
+         </script>
+
+         <p>By submitting this form you agree to <a id="policy-button" onclick="openPolicyPopup()">GAIA Club Policy.</a></p>
+
+    <div class="nav">
+
+        <button id="backButt" type="button" ><a href="{{route('language')}}">Back</a></button>   
+           
+
+        <button type="submit" id="contButtonLink">Submit</button></div>
+         </a>
+      </form>
+    </div>
+</div>
+    <div id="policy-overlay" onclick="closePolicyPopup()">
         <!-- Policy pop-up content -->
         <div id="policy-popup">
             <span id="close-button" onclick="closePolicyPopup()">&times;</span>
-            <img src="{{ secure_asset('images/logo2.png') }}" id="policy-logo" alt="GAIA logo">
-
+        <img src="logo2.png" id="policy-logo" alt="GAIA logo">
         <h2>A.	GEO-Africa Incubator/Accelerator (GAIA) Club Policy</h2>
         <h3>Preamble</h3>
         The GAIA Clubs established within universities across serve as a dynamic platform for nurturing the potential of young minds in the realms of digital technology, specifically focusing on the pivotal areas of earth observation (EO) and the Internet of Things (IoT).
@@ -249,66 +196,22 @@
         <li> g)	Mapping and monitoring critical coastal habitats like coral reefs, seagrass beds, and wetlands, which play a key role in coastal protection.</li>
         <li> h)	Conducting surveys to assess the socio-economic vulnerability of coastal communities to environmental changes.</li> 
         <li>i)	Mobile apps that contribute to awareness creation about coastal vulnerability and promote community engagement in mitigation and adaptation strategies.</li>
-
-        <h3>Instructions</h3>
-        <h4>Join a Group</h4>
-        <p>Membership in the GAIA Club is contingent upon being part of a collaborative group. Each applicant must be a member of a group, with each group consisting of 3 to 6 individuals. These groups must adhere to the principle of gender inclusivity.</p>
-       <h4>Completing the application form</h4>
-       <li>Every prospective member must individually complete the GAIA Club Membership Application Form.</li>
-
-        <li> One member of each group should register the group.</li>
-        <li> One member of each group should register the group.</li>
-        <li> Other members of an already registered group should skip the group registeration process and move on to select the name of their group in the personal data forms.</li>
-        <li> In the group registration window, the number of members of each group is selected and the group will not appear for selection once it is full.</li>
-        <li> Different groups are not allowed to have the same group name. A new name will have to be registered if the previous name has already been registered.</li>
-        <li>Ensure all sections of the form are filled out accurately and thoroughly.</li>
-        <li>Adherence to these guidelines is essential for your application to be considered for membership in the GAIA Club.</li>
-        <li>Application deadline:  31 December 2023</li>
-       
         <button id="closeButt" onclick="closePolicyGroup()">Done</button>
     </div>
 
-               <!-- More of your page content -->
-               <!-- JavaScript to control pop-up visibility -->
-               <script>
-                  function openPolicyPopup() {
-                        document.getElementById('groupCard').style.display='none';
-                        document.getElementById('policy-overlay').style.display = 'flex';
-                  }
+    <!-- More of your page content -->
+    <!-- JavaScript to control pop-up visibility -->
+    <script>
+        function openPolicyPopup() {
+            document.getElementById('extraCard').style.display='none';
+            document.getElementById('policy-overlay').style.display = 'flex';
+        }
 
-                  function closePolicyPopup() {
-                        document.getElementById('policy-overlay').style.display = 'none';
-                        document.getElementById('groupCard').style.display='flex';
-                  }
-               </script>
-
-            
-
-               
-                     <br>
-                     <br>
-                     
-
-                             
-
-
-            
-               
-            
-           
-
-
-            
-
-
-
-         
-
-            
-
-
-
-
-            
+        function closePolicyPopup() {
+            document.getElementById('policy-overlay').style.display = 'none';
+            document.getElementById('extraCard').style.display='flex';
+        }
+    </script>
 </body>
-@endsection
+
+</html>
