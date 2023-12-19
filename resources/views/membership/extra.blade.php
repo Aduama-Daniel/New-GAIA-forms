@@ -25,7 +25,7 @@
          <h3>Background, Interests, Skills & Contributions</h3>
          <h4>Background & Interests</h4>
          <div class="extras" id="bgAndInt">
-            <label for="prevExp">Previous Experience with Digital Technologies</label>
+            <label for="prevExp">Experience with Digital Technologies</label>
                <select class="options" id="prevExp" name="experience_digital_technologies" placeholder="Select your level of experience with digital technologies" required>
                   <option value="" disabled selected>Select your level of experience with digital technologies</option>
                   <option value="none">None</option>
