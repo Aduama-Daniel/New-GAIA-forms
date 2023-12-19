@@ -258,7 +258,7 @@
 
         
         <li> One member of each group should register the group.</li>
-        <li> Other members of an already registered group should skip the group registeration process and move on to select the name of their group in the personal data forms.</li>
+        <li> Other members of an already registered group should skip the group registration process and move on to select the name of their group in the personal data forms.</li>
         <li> In the group registration window, the number of members of each group is selected and the group will not appear for selection once it is full.</li>
         <li> Different groups are not allowed to have the same group name. A new name will have to be registered if the previous name has already been registered.</li>
         <li>Ensure all sections of the form are filled out accurately and thoroughly.</li>
