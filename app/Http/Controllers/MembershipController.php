@@ -7,6 +7,8 @@ use App\Models\Membership;
 use App\Models\Group;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use App;
+
 
 class MembershipController extends Controller
 {
@@ -15,6 +17,9 @@ class MembershipController extends Controller
 {
     $groups = Group::whereRaw('total_members > (SELECT COUNT(*) FROM memberships WHERE memberships.group_id = groups.id)')
         ->get();
+        session();
+
+        // dd(App::getLocale());
 
         
        
@@ -93,7 +98,8 @@ public function submitForm(Request $request)
         'group_id' => $selectedGroup->id,
     ]);
 
-    $request->session()->flash('success', '.User registered successfully!');
+    $request->session()->flash('success', __('User registered successfully!'));
+
     $request->session()->put('membership', $membership);
 
     return redirect()->route('groups.store');

@@ -12,7 +12,7 @@ body {
     overflow-y: auto; 
 }
 .custom-alert {
-    padding: 4px;
+    padding: 7px;
     margin-bottom: 2px;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -135,6 +135,9 @@ body {
     order: 2;
     height: 100%;
 }
+
+
+
 
 #extraCard #group-photo,
 #extraCard #lang-photo,
