@@ -63,7 +63,7 @@
 
                <div class="genderWrapper">
                   <label for="gender">@lang('Gender')</label>
-                  <select class="options" id="gender" name="@lang('Gender')" required>
+                  <select class="options" id="gender" name="gender" required>
                      <optgroup>
                         <option value="" disabled selected>@lang('Select your gender')</option>
                         <option value="male">@lang('Male')</option>
