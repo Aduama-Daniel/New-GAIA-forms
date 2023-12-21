@@ -93,11 +93,10 @@
                
 
                </div>
-               <div class="language-switcher">
-    
+                 <div class="language-switcher">
     <select id="lang" name="lang" onchange="changeLanguage()">
-        <option value="{{ route('lang.set', 'en') }}" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>En</option>
-        <option value="{{ route('lang.set', 'fr') }}" {{ app()->getLocale() == 'fr' ? 'selected' : '' }}>Fr</option>
+        <option value="{{ secure_url('locale/en') }}" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>En</option>
+        <option value="{{ secure_url('locale/fr') }}" {{ app()->getLocale() == 'fr' ? 'selected' : '' }}>Fr</option>
     </select>
 </div>
 
