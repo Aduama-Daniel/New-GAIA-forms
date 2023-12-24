@@ -4,8 +4,8 @@
 
 @section('head')
     <!-- Include stylesheets, meta tags, etc. -->
-    <link rel="stylesheet" href="{{ asset('/styles/form.css') }}">
-    <link rel="stylesheet" href="{{ asset('/styles/main.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('/styles/form.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('/styles/main.css') }}">
 
 
 
