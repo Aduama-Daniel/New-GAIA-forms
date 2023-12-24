@@ -14,15 +14,15 @@
          <img src="{{secure_asset('/images/3.jpg')}}" class="photo" id="extra-photo"></img>
 
          <!--<div class="photo"></div>-->
-         <div class="page">Background, Interests, Skills & Contributions</div>
+         <div class="page">@lang('Background, Interests, Skills & Contributions')</div>
       </div>
       <div class="form-container">
       <img src="{{secure_asset('/images/logo2.png')}}" id="extra-logo">
-      <h2>Club Registration Form</h2>
-      <form id="step1Form" action="{{ secure_url('/submit') }}" method="post">
-      <!-- <form id="step1Form" action="{{url('/submit') }}" method="post"> -->
+      <h2>@lang('Club Registration Form')</h2>
+      <!-- <form id="step1Form" action="{{ secure_url('/submit') }}" method="post"> -->
+      <form id="step1Form" action="{{secure_url('/submit') }}" method="post">
 @csrf <!-- Laravel CSRF token -->
-         <h3>Background, Interests, Skills & Contributions</h3>
+         <h3>@lang('Background, Interests, Skills & Contributions')</h3>
          <h4>@lang('Background & Interests')</h4>
          <div class="extras" id="bgAndInt">
             <label for="prevExp">@lang('Experience with Digital Technologies')</label>

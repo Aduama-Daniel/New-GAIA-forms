@@ -13,7 +13,7 @@ class GroupController extends Controller
 
     public function showForm()
     {
-        return view('membership.group');
+        return view('membership.group2');
     }
 
 

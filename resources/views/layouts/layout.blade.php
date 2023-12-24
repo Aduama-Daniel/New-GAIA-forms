@@ -13,7 +13,7 @@
    <
    
 <link rel="stylesheet" href="{{ secure_asset('/styles/main.css') }}">
-<!-- <link rel="stylesheet" href="{{ asset('/styles/main.css') }}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('/styles/main 3.css') }}"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">

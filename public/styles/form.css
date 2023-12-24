@@ -6,9 +6,9 @@ body {
     align-items: center;
     height: 100%;
     scroll-behavior: smoother;
-    background: #1E4981;
-    background: linear-gradient(to right, #1E4981, #2E9AFE);
-    background: -webkit-linear-gradient(to right, #1E4981, #2E9AFE);
+    background: #f4f4f4;
+    /* background: linear-gradient(to right, #1E4981, #2E9AFE); */
+    /* background: -webkit-linear-gradient(to right, #1E4981, #2E9AFE); */
     overflow-y: auto;
     z-index: 10;
 }*

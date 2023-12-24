@@ -4,9 +4,10 @@
 
 @section('head')
     <!-- Include stylesheets, meta tags, etc. -->
-    <!-- <link rel="stylesheet" href="{{ secure_asset('/styles/form.css') }}"> -->
     <link rel="stylesheet" href="{{ asset('/styles/form.css') }}">
     <link rel="stylesheet" href="{{ asset('/styles/main.css') }}">
+
+
 
     <!-- <style>
       .custom-alert {
@@ -31,7 +32,7 @@
     </style> -->
 
     
-    <style>
+   <style>
     #form-headers{
         position: relative;
         display: flex;
@@ -104,35 +105,35 @@
                
 
                </div>
-        
-
-
-
 
                
                
-                 
+
+               
                <div class="form-container">
-               <div class="language-switcher">
+                                
+                     <br><br><br><br>
+
+                    <div id="form-headers">
+                
+                     <img src="{{ secure_asset('/images/logo2.png') }}" id="group-logo">
+                     <!-- <img src="{{ asset('/images/logo2.png') }}" id="group-logo"> -->
+
+                     <div class="language-switcher">
     <select id="lang" name="lang" onchange="changeLanguage()">
         <option value="{{ secure_url('locale/en') }}" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>En</option>
         <option value="{{ secure_url('locale/fr') }}" {{ app()->getLocale() == 'fr' ? 'selected' : '' }}>Fr</option>
     </select>
-</div>
-          
-
-          
-                     <br><br><br><br>
-                     <img src="{{ secure_asset('/images/logo2.png') }}" id="group-logo">
-                     <!-- <img src="{{ asset('/images/logo2.png') }}" id="group-logo"> -->
+    </div>
+                    </div>
                      
 
 
                      
                      <h2>@lang('Club Registration Form')</h2>
 
-<!-- <form id="groupForm" action="{{ secure_url('/groups/submit') }}" method="post"> -->
-<form id="groupForm" action="{{ url('/groups/submit') }}" method="post">
+<form id="groupForm" action="{{ secure_url('/groups/submit') }}" method="post">
+<!-- <form id="groupForm" action="{{ url('/groups/submit') }}" method="post"> -->
     @csrf <!-- Laravel CSRF token -->
 
     <h3>@lang('Group Section')</h3>
@@ -164,8 +165,8 @@
 
     <div class="nav">
         <button type="submit" value="Submit" id="contButtonLink">@lang('Register')</button>
-        <!-- <button type="button"><a href="{{ secure_url('/form') }}" class="page-link">@lang('Skip')</a></button> -->
-        <button type="button"><a href="{{ url('/form') }}" class="page-link">@lang('Skip')</a></button>
+        <button type="button"><a href="{{ secure_url('/form') }}" class="page-link">@lang('Skip')</a></button>
+        <!-- <button type="button"><a href="{{ url('/form') }}" class="page-link">@lang('Skip')</a></button> -->
     </div>
 
     <br>
@@ -336,19 +337,17 @@
 
                <!-- More of your page content -->
                <!-- JavaScript to control pop-up visibility -->
-               <script>
-                  function openPolicyPopup() {
-                        document.getElementById('groupCard').style.display='none';
-                        document.getElementById('policy-overlay').style.display = 'flex';
-                  }
-
-                  function closePolicyPopup() {
-                        document.getElementById('policy-overlay').style.display = 'none';
-                        document.getElementById('groupCard').style.display='flex';
-                  }
-               </script>
-
 <script>
+    function openPolicyPopup() {
+        document.getElementById('groupCard').style.display = 'none';
+        document.getElementById('policy-overlay').style.display = 'flex';
+    }
+
+    function closePolicyPopup() {
+        document.getElementById('policy-overlay').style.display = 'none';
+        document.getElementById('groupCard').style.display = 'flex';
+    }
+
    function changeLanguage() {
     var lang = document.getElementById("lang").value;
     window.location.href = lang;

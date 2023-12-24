@@ -16,9 +16,10 @@
       </div>
       <div class="form-container">
       <img src="{{secure_asset('/images/logo2.png')}}" id="lang-logo" alt="GAIA logo">
+      <br><br><br>
       <h2>@lang('Club Registration Form')</h2>
+      <!-- <form id="step1Form" action="{{ secure_url('/store/2') }}" method="post"> -->
       <form id="step1Form" action="{{ secure_url('/store/2') }}" method="post">
-      <!-- <form id="step1Form" action="{{ url('/store/2') }}" method="post"> -->
       
 @csrf <!-- Laravel CSRF token -->   
       <h3>@lang('Language Proficiency')</h3>

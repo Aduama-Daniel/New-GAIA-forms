@@ -11,6 +11,24 @@ body {
     background: -webkit-linear-gradient(to right, #1E4981, #2E9AFE);
     overflow-y: auto; 
 }
+.custom-alert {
+    padding: 7px;
+    margin-bottom: 2px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
 
 #groupBody{
     display: flex;
@@ -43,26 +61,26 @@ body {
 }
 
 #groupCard{
-    height: 80vh; 
+    height: 100vh; 
     min-height: 650px;
     width: 70vw;
     margin: 10vh 20vw;
 }
 
 #indCard{
-    height: 160vh;
+    height: 170vh;
     min-height: 1100px;                  
 }
 
 #langCard{
-    height: 95vh;
+    height: 110vh;
     min-height: 700px;                  
     margin: 2.5vh 30vw;*/
 }
 
 #extraCard{
-    height: 220vh;
-    min-height: 2100px;
+    height: 230vh;
+    min-height: 2200px;
 }
 
 .photo-wrapper{
@@ -117,6 +135,9 @@ body {
     order: 2;
     height: 100%;
 }
+
+
+
 
 #extraCard #group-photo,
 #extraCard #lang-photo,
@@ -234,8 +255,8 @@ body {
 }
 
 #group-logo{
-    transform: translateY(-10%);
-    margin-bottom: 5vh;
+    /*transform: translateY(-10%);
+    margin-bottom: 5vh;*/
 }
 
 #ind-logo{
@@ -525,6 +546,10 @@ button:hover {
     transform: translateY(50%);
 }
 
+#extraBody #backButt > a{
+    color: white;
+    text-decoration: none;
+}
 body {
     margin: 0;
     padding: 0;
@@ -668,23 +693,4 @@ width: 0;
 #extraBody{
     background: linear-gradient(to bottom,rgb(0, 0, 0), #104b7c17, #193b516c) ,url('../images/3.jpg') center center no-repeat;
 }
-
-.custom-alert {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.success {
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
-    color: #155724;
-}
-
-.error {
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    color: #721c24;
-}
-
 }
