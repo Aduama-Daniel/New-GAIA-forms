@@ -6,6 +6,8 @@ use App\Http\Controllers\GroupController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ChartController;
 
 
 Route::get('/', function () {
@@ -65,6 +67,13 @@ Route::get('/members', [MembersController::class, 'index'])->name('members.index
 
 
 Route::get('/user-details/{userId}', [UserController::class, 'showDetails'])->name('user.details');
+Route::get('/admindashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/adminchartdashboard', [ChartController::class, 'dashboard'])->name('adminchart.dashboard');
+
+
+Route::get('/search', 'SearchController@search')->name('search');
+
+
 
 
 
